@@ -97,21 +97,79 @@
 // }
 
 //! prime number
-let n = +prompt("please enter a number for getting factor number");
+// let n = +prompt("please enter a number for getting factor number");
 
-if (isNaN(n)) {
-  console.log("invalid number");
+// if (isNaN(n)) {
+//   console.log("invalid number");
+// } else {
+//   if (n >= 2) {
+//     let prime = true;
+//     for (let i = 2; i <= Math.sqrt(n); i++) {
+//       if (n % i === 0) {
+//         prime = false;
+//         break;
+//       }
+//     }
+//     console.log(n + " is  pritime number? :", prime);
+//   } else {
+//     console.log("enter valid number and more then zero");
+//   }
+// }
+
+//--------------------------------------------------
+// //!sum of digit
+
+// let n = +prompt("enter a number please for sum of number");
+
+// if (isNaN(n) || n <= 0) {
+//   console.log("please enter valid number");
+// } else {
+//   let sum = 0;
+//   while (n > 0) {
+//     sum = sum + (n % 10);
+//     n = Math.floor(n / 10);
+//   }
+//   console.log(sum);
+// }
+
+//!reverse of digit
+
+// let n = +prompt("enter a number please for sum of number");
+
+// if (isNaN(n) || n <= 0) {
+//   console.log("please enter valid number");
+// } else {
+//   let reverse = 0;
+//   while (n > 0) {
+//     reverse = reverse * 10 + (n % 10);
+//     n = Math.floor(n / 10);
+//   }
+//   console.log(reverse);
+// }
+
+// --------------------------------------------------------
+
+//!strong number ------------
+
+let n = +prompt("enter a number please for sum of number");
+
+let orignalValue = n;
+if (isNaN(n) || n <= 0) {
+  console.log("please enter valid number");
 } else {
-  if (n >= 2) {
-    let prime = true;
-    for (let i = 2; i <= Math.sqrt(n); i++) {
-      if (n % i === 0) {
-        prime = false;
-        break;
-      }
+  let sum = 0;
+  while (n > 0) {
+    let rem = n % 10;
+    n = Math.floor(n / 10);
+    let factorial = 1;
+    for (let i = 1; i <= rem; i++) {
+      factorial *= i;
     }
-    console.log(n + " is  pritime number? :", prime);
-  } else {
-    console.log("enter valid number and more then zero");
+    sum = sum + factorial;
   }
+  console.log(
+    orignalValue == sum
+      ? `${orignalValue} is strong value  `
+      : `${orignalValue} is not strong value`
+  );
 }
