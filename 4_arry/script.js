@@ -92,15 +92,29 @@ let arr2 = [10, 20, 30, 40, 50, 50, 50];
 
 // third method
 
-let i = 0;
-let j = arr.length - 1;
-console.log(arr);
+// let i = 0;
+// let j = arr.length - 1;
+// console.log(arr);
 
-while (i < j) {
-  let temp = arr[i];
-  arr[i] = arr[j];
-  arr[j] = temp;
-  i++;
-  j--;
+// while (i < j) {
+//   let temp = arr[i];
+//   arr[i] = arr[j];
+//   arr[j] = temp;
+//   i++;
+//   j--;
+// }
+// console.log(arr);
+
+//! all zeros left and all zeros in one
+
+let array = [0, 1, 0, 1, 0, 1, 0, 0, 1, 1, 0, 1];
+
+for (let i = 0; i < array.length; i++) {
+  let temp = array[i];
+  if (array[i + 1] < array[i]) {
+    array[i] = array[i + 1];
+    array[i + 1] = temp;
+  }
 }
-console.log(arr);
+
+console.log(array);
