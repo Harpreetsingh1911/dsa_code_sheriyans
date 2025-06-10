@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>singh</title>
+</head>
+<body>
+    <script>
+        // function number(n)
+        // {
+        //     if(n == 0) return
+        //     number(n-1)
+        //     console.log(n);
+        // }
+        // number(5)
+
+        //note => agr hmm number(n--) kre to kya hogga kii function call hogaa 5 value kee sath or call stack mai chla jaee ga , hmme decrement krne ka time he nhi lgge ga ; or call stack exceded error aa jaee ga
+
+        // hmm preincrement use krr skte hai 
+
+        //  print n decrement number using recursion
+
+        // function nDec(n){
+        //     if(n==11) return 
+        //     nDec(n+1)
+        //     console.log(n);
+        // }
+        // nDec(1)
+
+        //===============
+        // sum of n number 
+
+        // function sum(n)
+        // {
+        //     debugger
+        //     if(n==1) return 1
+        //     return n + sum(n-1)
+        // }
+
+        // console.log(sum(5));
+
+        // print fib series of n number  // first method
+
+        let n = 19;
+           let fib = [ 0, 1]
+
+           let i = 0;
+           let j = 1
+
+           while(fib.length<=n){
+            fib.push(fib[i]+ fib[j])
+            i++;
+            j++
+           }
+           console.log(fib);
+           
+    </script>
+</body>
+</html>
